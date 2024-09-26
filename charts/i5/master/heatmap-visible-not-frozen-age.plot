@@ -1,6 +1,6 @@
 set terminal postscript eps size 10,4 enhanced color font 'Helvetica,10'
 set output 'heatmap-visible-not-frozen-age.eps'
-set title 'heatmap-visible-not-frozen-age'
+set title 'i5 / master / visible, not frozen (age)'
 set xrange [0:360]
 set yrange [0:100]
 set object 1 rect from 0,0 to 1,1 fc rgb '#FF8282' fs noborder

@@ -62,12 +62,13 @@ EOF
 		echo "generating eps"
 		for f in *.plot; do
 			gnuplot $f
+			magick convert -density 200 ${f/plot/eps} ${f/plot/png};
 		done
 
 		rm -Rf charts/$m/$b
 		mkdir -p charts/$m/$b
 
-		mv *.data *.plot *.eps charts/$m/$b
+		mv *.data *.plot *.eps *.png charts/$m/$b
 
 	done
 

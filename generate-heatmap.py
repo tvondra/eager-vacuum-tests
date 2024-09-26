@@ -21,7 +21,7 @@ plotfile = open('%(fname)s.plot' % {'fname' : FNAME}, 'w')
 
 plotfile.write("set terminal postscript eps size 10,4 enhanced color font 'Helvetica,10'\n")
 plotfile.write("set output '%s.eps'\n" % (FNAME,))
-plotfile.write("set title '%s'\n" % (FNAME,))
+plotfile.write("set title '%s'\n" % (TITLE,))
 
 # write ranges
 plotfile.write("set xrange [0:%s]\n" % (maxtime,))
