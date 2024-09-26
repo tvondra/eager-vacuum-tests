@@ -1,0 +1,465 @@
+1727268648.126 [2024-09-25 14:50:48.126 CEST] [166799] LOG:  starting PostgreSQL 18devel on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+1727268648.127 [2024-09-25 14:50:48.127 CEST] [166799] LOG:  listening on IPv6 address "::1", port 5432
+1727268648.127 [2024-09-25 14:50:48.127 CEST] [166799] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+1727268648.128 [2024-09-25 14:50:48.128 CEST] [166799] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+1727268648.130 [2024-09-25 14:50:48.130 CEST] [166802] LOG:  database system was shut down at 2024-09-25 14:50:47 CEST
+1727268648.133 [2024-09-25 14:50:48.133 CEST] [166799] LOG:  database system is ready to accept connections
+1727268661.499 [2024-09-25 14:51:01.499 CEST] [166800] LOG:  checkpoint starting: immediate force wait
+1727268661.513 [2024-09-25 14:51:01.513 CEST] [166800] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.010 s, sync=0.001 s, total=0.014 s; sync files=3, longest=0.001 s, average=0.001 s; distance=4 kB, estimate=4 kB; lsn=3EB/4C31EE50, redo lsn=3EB/4C31EDF8
+1727268689.004 [2024-09-25 14:51:29.004 CEST] [167254] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 16867 remain, 16867 scanned (100.00% of total)
+	tuples: 0 removed, 1441720 remain, 94 are dead but not yet removable
+	removable cutoff: 44203609, which was 341 XIDs old when operation ended
+	new relfrozenxid: 44196521, which is 7 XIDs ahead of previous value
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 6828 pages from table (40.48% of total) had 7088 dead item identifiers removed
+	index "hottail_pkey": pages: 4036 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 4049 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 1969 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 1194 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 1554 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 0.000 MB/s, avg write rate: 0.009 MB/s
+	buffer usage: 53479 hits, 0 reads, 1 dirtied
+	WAL usage: 33812 records, 1 full page images, 2003099 bytes
+	system usage: CPU: user: 0.26 s, system: 0.02 s, elapsed: 0.84 s
+1727268689.342 [2024-09-25 14:51:29.342 CEST] [167254] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 17807 hits, 0 reads, 0 dirtied
+	WAL usage: 18 records, 0 full page images, 7141 bytes
+	system usage: CPU: user: 0.14 s, system: 0.00 s, elapsed: 0.33 s
+1727268689.347 [2024-09-25 14:51:29.347 CEST] [167254] LOG:  automatic analyze of table "test.pg_catalog.pg_depend"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 312 hits, 0 reads, 0 dirtied
+	WAL usage: 24 records, 0 full page images, 6443 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+1727268689.352 [2024-09-25 14:51:29.352 CEST] [167254] LOG:  automatic analyze of table "test.pg_catalog.pg_database"
+	avg read rate: 1.302 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 509 hits, 1 reads, 0 dirtied
+	WAL usage: 29 records, 0 full page images, 4783 bytes
+	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+1727268711.481 [2024-09-25 14:51:51.481 CEST] [167807] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 70022 remain, 53391 scanned (76.25% of total)
+	tuples: 21664 removed, 5986853 remain, 699 are dead but not yet removable
+	removable cutoff: 44225620, which was 3506 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 20952 pages from table (29.92% of total) had 22008 dead item identifiers removed
+	index "hottail_pkey": pages: 17098 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 17309 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 8477 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 5264 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 7685 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 0.000 MB/s, avg write rate: 0.005 MB/s
+	buffer usage: 183759 hits, 0 reads, 2 dirtied
+	WAL usage: 120345 records, 2 full page images, 7097860 bytes
+	system usage: CPU: user: 1.26 s, system: 0.07 s, elapsed: 3.30 s
+1727268712.023 [2024-09-25 14:51:52.023 CEST] [167807] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 30347 hits, 0 reads, 0 dirtied
+	WAL usage: 20 records, 0 full page images, 6979 bytes
+	system usage: CPU: user: 0.22 s, system: 0.00 s, elapsed: 0.54 s
+1727268778.574 [2024-09-25 14:52:58.574 CEST] [169489] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 226280 remain, 157923 scanned (69.79% of total)
+	tuples: 66816 removed, 19346469 remain, 237 are dead but not yet removable
+	removable cutoff: 44292555, which was 11134 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 63877 pages from table (28.23% of total) had 66934 dead item identifiers removed
+	index "hottail_pkey": pages: 56260 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 56938 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 27954 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 17407 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 25912 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 0.000 MB/s, avg write rate: 0.003 MB/s
+	buffer usage: 564570 hits, 0 reads, 4 dirtied
+	WAL usage: 366835 records, 4 full page images, 21617807 bytes
+	system usage: CPU: user: 4.03 s, system: 0.25 s, elapsed: 10.37 s
+1727268779.134 [2024-09-25 14:52:59.134 CEST] [169489] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 0.000 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 30347 hits, 0 reads, 0 dirtied
+	WAL usage: 16 records, 0 full page images, 6553 bytes
+	system usage: CPU: user: 0.23 s, system: 0.00 s, elapsed: 0.55 s
+1727268841.905 [2024-09-25 14:54:01.905 CEST] [171148] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 380945 remain, 155275 scanned (40.76% of total)
+	tuples: 65201 removed, 32571328 remain, 708 are dead but not yet removable
+	removable cutoff: 44357878, which was 14537 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 62347 pages from table (16.37% of total) had 65322 dead item identifiers removed
+	index "hottail_pkey": pages: 93084 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 93957 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 46176 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 28704 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 43072 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 50.897 MB/s, avg write rate: 0.047 MB/s
+	buffer usage: 589279 hits, 89184 reads, 82 dirtied
+	WAL usage: 360062 records, 5 full page images, 21215048 bytes
+	system usage: CPU: user: 5.10 s, system: 0.42 s, elapsed: 13.68 s
+1727268842.629 [2024-09-25 14:54:02.629 CEST] [171148] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 92.056 MB/s, avg write rate: 0.043 MB/s
+	buffer usage: 21807 hits, 8531 reads, 4 dirtied
+	WAL usage: 13 records, 0 full page images, 6260 bytes
+	system usage: CPU: user: 0.26 s, system: 0.05 s, elapsed: 0.72 s
+1727268905.797 [2024-09-25 14:55:05.797 CEST] [172830] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 532228 remain, 152994 scanned (28.75% of total)
+	tuples: 64916 removed, 45505645 remain, 26 are dead but not yet removable
+	removable cutoff: 44422911, which was 17747 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 62161 pages from table (11.68% of total) had 65032 dead item identifiers removed
+	index "hottail_pkey": pages: 129328 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 131234 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 64584 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 40013 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 60082 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 100.516 MB/s, avg write rate: 0.013 MB/s
+	buffer usage: 568169 hits, 225967 reads, 30 dirtied
+	WAL usage: 357488 records, 5 full page images, 21069487 bytes
+	system usage: CPU: user: 5.94 s, system: 0.77 s, elapsed: 17.56 s
+1727268906.528 [2024-09-25 14:55:06.528 CEST] [172830] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 145.947 MB/s, avg write rate: 0.011 MB/s
+	buffer usage: 16692 hits, 13656 reads, 1 dirtied
+	WAL usage: 15 records, 0 full page images, 6203 bytes
+	system usage: CPU: user: 0.22 s, system: 0.04 s, elapsed: 0.73 s
+1727268969.084 [2024-09-25 14:56:09.084 CEST] [174490] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 681362 remain, 149267 scanned (21.91% of total)
+	tuples: 62921 removed, 58257022 remain, 409 are dead but not yet removable
+	removable cutoff: 44485974, which was 21710 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 60413 pages from table (8.87% of total) had 63062 dead item identifiers removed
+	index "hottail_pkey": pages: 164651 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 167395 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 82320 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 51325 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 77132 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 132.932 MB/s, avg write rate: 0.013 MB/s
+	buffer usage: 548308 hits, 354427 reads, 35 dirtied
+	WAL usage: 348237 records, 4 full page images, 20506889 bytes
+	system usage: CPU: user: 6.28 s, system: 1.30 s, elapsed: 20.82 s
+1727268969.833 [2024-09-25 14:56:09.833 CEST] [174490] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 175.891 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 13491 hits, 16863 reads, 0 dirtied
+	WAL usage: 15 records, 0 full page images, 6219 bytes
+	system usage: CPU: user: 0.21 s, system: 0.03 s, elapsed: 0.74 s
+1727269033.167 [2024-09-25 14:57:13.167 CEST] [176179] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 836685 remain, 156351 scanned (18.69% of total)
+	tuples: 66201 removed, 71537521 remain, 178 are dead but not yet removable
+	removable cutoff: 44552282, which was 27312 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 62861 pages from table (7.51% of total) had 66307 dead item identifiers removed
+	index "hottail_pkey": pages: 202084 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 205478 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 101179 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 63275 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 94618 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 146.483 MB/s, avg write rate: 0.013 MB/s
+	buffer usage: 576581 hits, 466759 reads, 43 dirtied
+	WAL usage: 360120 records, 5 full page images, 21256824 bytes
+	system usage: CPU: user: 6.99 s, system: 1.34 s, elapsed: 24.89 s
+1727269034.030 [2024-09-25 14:57:14.030 CEST] [176179] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 181.036 MB/s, avg write rate: 0.018 MB/s
+	buffer usage: 10362 hits, 19998 reads, 2 dirtied
+	WAL usage: 15 records, 0 full page images, 6422 bytes
+	system usage: CPU: user: 0.26 s, system: 0.07 s, elapsed: 0.86 s
+1727269096.918 [2024-09-25 14:58:16.918 CEST] [177848] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 987226 remain, 151017 scanned (15.30% of total)
+	tuples: 64067 removed, 84406392 remain, 53 are dead but not yet removable
+	removable cutoff: 44616447, which was 30243 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 61160 pages from table (6.20% of total) had 64164 dead item identifiers removed
+	index "hottail_pkey": pages: 237598 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 241232 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 118721 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 74374 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 111472 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 163.753 MB/s, avg write rate: 0.007 MB/s
+	buffer usage: 548015 hits, 599991 reads, 26 dirtied
+	WAL usage: 352635 records, 5 full page images, 20783429 bytes
+	system usage: CPU: user: 8.17 s, system: 1.72 s, elapsed: 28.62 s
+1727269097.772 [2024-09-25 14:58:17.772 CEST] [177848] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 190.534 MB/s, avg write rate: 0.018 MB/s
+	buffer usage: 9512 hits, 20852 reads, 2 dirtied
+	WAL usage: 15 records, 0 full page images, 6318 bytes
+	system usage: CPU: user: 0.22 s, system: 0.05 s, elapsed: 0.85 s
+1727269161.050 [2024-09-25 14:59:21.050 CEST] [179515] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 1135685 remain, 148652 scanned (13.09% of total)
+	tuples: 62823 removed, 97105269 remain, 281 are dead but not yet removable
+	removable cutoff: 44679379, which was 34423 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 60147 pages from table (5.30% of total) had 62931 dead item identifiers removed
+	index "hottail_pkey": pages: 272928 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 277443 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 136506 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 85605 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 128071 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 170.199 MB/s, avg write rate: 0.018 MB/s
+	buffer usage: 546401 hits, 713210 reads, 75 dirtied
+	WAL usage: 345662 records, 4 full page images, 20367787 bytes
+	system usage: CPU: user: 8.89 s, system: 2.15 s, elapsed: 32.73 s
+1727269161.945 [2024-09-25 14:59:21.945 CEST] [179515] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 194.614 MB/s, avg write rate: 0.026 MB/s
+	buffer usage: 8074 hits, 22295 reads, 3 dirtied
+	WAL usage: 16 records, 0 full page images, 6468 bytes
+	system usage: CPU: user: 0.23 s, system: 0.06 s, elapsed: 0.89 s
+1727269225.859 [2024-09-25 15:00:25.859 CEST] [181185] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 1281385 remain, 146408 scanned (11.43% of total)
+	tuples: 62054 removed, 109563411 remain, 88 are dead but not yet removable
+	removable cutoff: 44741554, which was 38391 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 59311 pages from table (4.63% of total) had 62174 dead item identifiers removed
+	index "hottail_pkey": pages: 307680 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 312945 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 153978 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 96735 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 144536 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 172.405 MB/s, avg write rate: 0.010 MB/s
+	buffer usage: 541583 hits, 828199 reads, 46 dirtied
+	WAL usage: 340929 records, 5 full page images, 20101495 bytes
+	system usage: CPU: user: 9.94 s, system: 2.42 s, elapsed: 37.52 s
+1727269226.850 [2024-09-25 15:00:26.850 CEST] [181185] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 180.697 MB/s, avg write rate: 0.000 MB/s
+	buffer usage: 7445 hits, 22921 reads, 0 dirtied
+	WAL usage: 12 records, 0 full page images, 6060 bytes
+	system usage: CPU: user: 0.23 s, system: 0.09 s, elapsed: 0.99 s
+1727269291.819 [2024-09-25 15:01:31.819 CEST] [182886] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 1425208 remain, 144061 scanned (10.11% of total)
+	tuples: 60621 removed, 121858280 remain, 539 are dead but not yet removable
+	removable cutoff: 44802290, which was 46861 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 58036 pages from table (4.07% of total) had 60735 dead item identifiers removed
+	index "hottail_pkey": pages: 342329 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 348451 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 171415 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 107910 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 161406 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 171.006 MB/s, avg write rate: 1.043 MB/s
+	buffer usage: 528324 hits, 951502 reads, 5805 dirtied
+	WAL usage: 334617 records, 4 full page images, 19709096 bytes
+	system usage: CPU: user: 11.04 s, system: 2.58 s, elapsed: 43.46 s
+1727269362.692 [2024-09-25 15:02:42.692 CEST] [184541] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 1580723 remain, 156834 scanned (9.92% of total)
+	tuples: 66369 removed, 135154632 remain, 225 are dead but not yet removable
+	removable cutoff: 44868761, which was 62369 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 63085 pages from table (3.99% of total) had 66471 dead item identifiers removed
+	index "hottail_pkey": pages: 380560 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 387986 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 191182 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 120634 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 180596 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 157.029 MB/s, avg write rate: 3.774 MB/s
+	buffer usage: 548482 hits, 1091957 reads, 26247 dirtied
+	WAL usage: 361839 records, 5 full page images, 21354322 bytes
+	system usage: CPU: user: 11.91 s, system: 3.29 s, elapsed: 54.32 s
+1727269364.522 [2024-09-25 15:02:44.522 CEST] [184541] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 103.687 MB/s, avg write rate: 0.009 MB/s
+	buffer usage: 6072 hits, 24301 reads, 2 dirtied
+	WAL usage: 12 records, 0 full page images, 6035 bytes
+	system usage: CPU: user: 0.23 s, system: 0.16 s, elapsed: 1.83 s
+1727269423.980 [2024-09-25 15:03:43.980 CEST] [166800] LOG:  checkpoint starting: wal
+1727269638.272 [2024-09-25 15:07:18.272 CEST] [187835] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 1913551 remain, 333403 scanned (17.42% of total)
+	tuples: 140884 removed, 163629259 remain, 728 are dead but not yet removable
+	removable cutoff: 45009835, which was 223514 XIDs old when operation ended
+	frozen: 128509 pages from table (6.72% of total) had 11047925 tuples frozen
+	index scan needed: 133532 pages from table (6.98% of total) had 141073 dead item identifiers removed
+	index "hottail_pkey": pages: 503629 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 519055 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 258379 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 164349 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 246914 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 69.472 MB/s, avg write rate: 19.886 MB/s
+	buffer usage: 631943 hits, 1866441 reads, 534261 dirtied
+	WAL usage: 759778 records, 284047 full page images, 1933187676 bytes
+	system usage: CPU: user: 20.23 s, system: 9.65 s, elapsed: 209.89 s
+1727269640.331 [2024-09-25 15:07:20.331 CEST] [187835] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 98.795 MB/s, avg write rate: 13.101 MB/s
+	buffer usage: 4358 hits, 26025 reads, 3451 dirtied
+	WAL usage: 12 records, 4 full page images, 27461 bytes
+	system usage: CPU: user: 0.26 s, system: 0.18 s, elapsed: 2.05 s
+1727270118.201 [2024-09-25 15:15:18.201 CEST] [166800] LOG:  checkpoint complete: wrote 8704 buffers (1.7%); 0 WAL file(s) added, 15 removed, 4296 recycled; write=688.996 s, sync=4.425 s, total=694.221 s; sync files=358, longest=1.602 s, average=0.013 s; distance=70629486 kB, estimate=70629486 kB; lsn=40B/5A53E980, redo lsn=3FC/2313A988
+1727270146.315 [2024-09-25 15:15:46.315 CEST] [194231] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 2510703 remain, 598935 scanned (23.86% of total)
+	tuples: 253715 removed, 214691054 remain, 673 are dead but not yet removable
+	removable cutoff: 45263918, which was 481247 XIDs old when operation ended
+	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
+	index scan needed: 241961 pages from table (9.64% of total) had 254082 dead item identifiers removed
+	index "hottail_pkey": pages: 711348 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 740328 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 370171 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 237084 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 357551 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 49.687 MB/s, avg write rate: 18.784 MB/s
+	buffer usage: 826904 hits, 3039151 reads, 1148904 dirtied
+	WAL usage: 1389252 records, 18 full page images, 81908876 bytes
+	system usage: CPU: user: 31.36 s, system: 24.12 s, elapsed: 477.85 s
+1727270153.305 [2024-09-25 15:15:53.305 CEST] [205044] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 45.472 MB/s, avg write rate: 12.072 MB/s
+	buffer usage: 3057 hits, 27391 reads, 7272 dirtied
+	WAL usage: 12 records, 0 full page images, 6086 bytes
+	system usage: CPU: user: 0.35 s, system: 0.24 s, elapsed: 4.70 s
+1727270192.932 [2024-09-25 15:16:32.932 CEST] [166800] LOG:  checkpoint starting: wal
+1727270819.888 [2024-09-25 15:26:59.888 CEST] [166800] LOG:  checkpoint complete: wrote 3814 buffers (0.7%); 0 WAL file(s) added, 10 removed, 4301 recycled; write=623.402 s, sync=2.878 s, total=626.956 s; sync files=59, longest=1.512 s, average=0.049 s; distance=70630888 kB, estimate=70630888 kB; lsn=41C/2C0FCB70, redo lsn=40C/FA0B4A38
+1727270882.463 [2024-09-25 15:28:02.463 CEST] [166800] LOG:  checkpoint starting: wal
+1727271209.245 [2024-09-25 15:33:29.245 CEST] [206299] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 3791040 remain, 1282024 scanned (33.82% of total)
+	tuples: 544155 removed, 324159181 remain, 555 are dead but not yet removable
+	removable cutoff: 45808717, which was 1056576 XIDs old when operation ended
+	frozen: 502528 pages from table (13.26% of total) had 43184030 tuples frozen
+	index scan needed: 518543 pages from table (13.68% of total) had 544798 dead item identifiers removed
+	index "hottail_pkey": pages: 1162814 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 1229406 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 619028 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 397739 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 600985 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 43.560 MB/s, avg write rate: 19.299 MB/s
+	buffer usage: 1532295 hits, 5579177 reads, 2471780 dirtied
+	WAL usage: 2986299 records, 1677555 full page images, 11258137815 bytes
+	system usage: CPU: user: 60.97 s, system: 52.06 s, elapsed: 1000.62 s
+1727271497.270 [2024-09-25 15:38:17.270 CEST] [166800] LOG:  checkpoint complete: wrote 2340 buffers (0.4%); 0 WAL file(s) added, 13 removed, 4298 recycled; write=610.158 s, sync=3.954 s, total=614.807 s; sync files=68, longest=1.370 s, average=0.059 s; distance=70631497 kB, estimate=70631497 kB; lsn=42D/609F0F0, redo lsn=41D/D10C6FA0
+1727271560.969 [2024-09-25 15:39:20.969 CEST] [166800] LOG:  checkpoint starting: wal
+1727272191.655 [2024-09-25 15:49:51.655 CEST] [166800] LOG:  checkpoint complete: wrote 2246 buffers (0.4%); 0 WAL file(s) added, 4 removed, 4307 recycled; write=628.647 s, sync=1.426 s, total=630.686 s; sync files=66, longest=0.503 s, average=0.022 s; distance=70631707 kB, estimate=70631707 kB; lsn=43D/D431FC18, redo lsn=42E/A810DCD0
+1727272255.004 [2024-09-25 15:50:55.004 CEST] [166800] LOG:  checkpoint starting: wal
+1727272873.155 [2024-09-25 16:01:13.155 CEST] [166800] LOG:  checkpoint complete: wrote 1435 buffers (0.3%); 0 WAL file(s) added, 13 removed, 4298 recycled; write=614.073 s, sync=3.350 s, total=618.153 s; sync files=72, longest=1.129 s, average=0.047 s; distance=70631249 kB, estimate=70631661 kB; lsn=44E/B4030960, redo lsn=43F/7F0E2140
+1727272935.243 [2024-09-25 16:02:15.243 CEST] [166800] LOG:  checkpoint starting: wal
+1727273174.520 [2024-09-25 16:06:14.520 CEST] [226032] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 6324475 remain, 2534932 scanned (40.08% of total)
+	tuples: 1077419 removed, 540776617 remain, 71 are dead but not yet removable
+	removable cutoff: 46886921, which was 2071912 XIDs old when operation ended
+	frozen: 1021392 pages from table (16.15% of total) had 87788366 tuples frozen
+	index scan needed: 1022115 pages from table (16.16% of total) had 1078204 dead item identifiers removed
+	index "hottail_pkey": pages: 2041187 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 2154460 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 1083550 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 695287 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 1051691 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 41.579 MB/s, avg write rate: 19.733 MB/s
+	buffer usage: 2796794 hits, 10354554 reads, 4914115 dirtied
+	WAL usage: 5844447 records, 3309923 full page images, 22202145960 bytes
+	system usage: CPU: user: 102.58 s, system: 93.18 s, elapsed: 1945.58 s
+1727273180.639 [2024-09-25 16:06:20.639 CEST] [226032] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 37.310 MB/s, avg write rate: 15.716 MB/s
+	buffer usage: 1296 hits, 29222 reads, 12309 dirtied
+	WAL usage: 12 records, 4 full page images, 29348 bytes
+	system usage: CPU: user: 0.32 s, system: 0.29 s, elapsed: 6.11 s
+1727273556.612 [2024-09-25 16:12:36.612 CEST] [166800] LOG:  checkpoint complete: wrote 1384 buffers (0.3%); 0 WAL file(s) added, 11 removed, 4300 recycled; write=617.092 s, sync=3.725 s, total=621.370 s; sync files=99, longest=2.109 s, average=0.038 s; distance=70631348 kB, estimate=70631630 kB; lsn=45F/89EFAAF8, redo lsn=450/560CF1A0
+1727273625.479 [2024-09-25 16:13:45.479 CEST] [166800] LOG:  checkpoint starting: wal
+1727274266.740 [2024-09-25 16:24:26.740 CEST] [166800] LOG:  checkpoint complete: wrote 1172 buffers (0.2%); 0 WAL file(s) added, 12 removed, 4299 recycled; write=637.002 s, sync=3.620 s, total=641.262 s; sync files=74, longest=0.883 s, average=0.049 s; distance=70631663 kB, estimate=70631663 kB; lsn=470/611D75D0, redo lsn=461/2D10AEE0
+1727274337.978 [2024-09-25 16:25:37.978 CEST] [166800] LOG:  checkpoint starting: wal
+1727274992.900 [2024-09-25 16:36:32.900 CEST] [166800] LOG:  checkpoint complete: wrote 1223 buffers (0.2%); 0 WAL file(s) added, 13 removed, 4298 recycled; write=650.292 s, sync=3.791 s, total=654.922 s; sync files=70, longest=0.982 s, average=0.055 s; distance=70631103 kB, estimate=70631607 kB; lsn=481/390983E0, redo lsn=472/40BAE18
+1727275058.855 [2024-09-25 16:37:38.855 CEST] [166800] LOG:  checkpoint starting: wal
+1727275690.602 [2024-09-25 16:48:10.602 CEST] [166800] LOG:  checkpoint complete: wrote 843 buffers (0.2%); 0 WAL file(s) added, 13 removed, 4298 recycled; write=627.430 s, sync=3.644 s, total=631.747 s; sync files=66, longest=1.074 s, average=0.056 s; distance=70631485 kB, estimate=70631595 kB; lsn=492/10C002F8, redo lsn=482/DB0CA4E8
+1727275762.406 [2024-09-25 16:49:22.406 CEST] [166800] LOG:  checkpoint starting: wal
+1727276373.180 [2024-09-25 16:59:33.180 CEST] [166800] LOG:  checkpoint complete: wrote 726 buffers (0.1%); 0 WAL file(s) added, 14 removed, 4297 recycled; write=605.990 s, sync=4.135 s, total=610.774 s; sync files=73, longest=1.393 s, average=0.057 s; distance=70631520 kB, estimate=70631587 kB; lsn=4A2/E8038CC8, redo lsn=493/B20E2538
+1727276437.749 [2024-09-25 17:00:37.749 CEST] [166800] LOG:  checkpoint starting: wal
+1727277046.722 [2024-09-25 17:10:46.722 CEST] [166800] LOG:  checkpoint complete: wrote 1021 buffers (0.2%); 0 WAL file(s) added, 12 removed, 4299 recycled; write=604.436 s, sync=3.892 s, total=608.973 s; sync files=75, longest=1.065 s, average=0.052 s; distance=70631316 kB, estimate=70631560 kB; lsn=4B3/BD63D080, redo lsn=4A4/890C7688
+1727277113.708 [2024-09-25 17:11:53.708 CEST] [166800] LOG:  checkpoint starting: wal
+1727277114.136 [2024-09-25 17:11:54.136 CEST] [258922] LOG:  automatic vacuum of table "test.public.hottail": index scans: 1
+	pages: 0 removed, 11453099 remain, 5129095 scanned (44.78% of total)
+	tuples: 2180000 removed, 979312628 remain, 843 are dead but not yet removable
+	removable cutoff: 49067831, which was 3953861 XIDs old when operation ended
+	frozen: 2064758 pages from table (18.03% of total) had 177474194 tuples frozen
+	index scan needed: 2065624 pages from table (18.04% of total) had 2180909 dead item identifiers removed
+	index "hottail_pkey": pages: 3727018 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 3949213 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 1990238 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 1274143 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 1934672 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 40.324 MB/s, avg write rate: 20.459 MB/s
+	buffer usage: 5419985 hits, 19843432 reads, 10068126 dirtied
+	WAL usage: 11775520 records, 6648868 full page images, 44601701858 bytes
+	system usage: CPU: user: 210.47 s, system: 175.46 s, elapsed: 3844.56 s
+1727277733.530 [2024-09-25 17:22:13.530 CEST] [166800] LOG:  checkpoint complete: wrote 780 buffers (0.1%); 0 WAL file(s) added, 9 removed, 4302 recycled; write=615.920 s, sync=3.243 s, total=619.823 s; sync files=91, longest=0.804 s, average=0.036 s; distance=70631492 kB, estimate=70631553 kB; lsn=4C4/914E3238, redo lsn=4B5/600D8980
+1727277799.870 [2024-09-25 17:23:19.870 CEST] [166800] LOG:  checkpoint starting: wal
+1727278416.160 [2024-09-25 17:33:36.160 CEST] [166800] LOG:  checkpoint complete: wrote 789 buffers (0.2%); 0 WAL file(s) added, 5 removed, 4306 recycled; write=614.097 s, sync=1.554 s, total=616.291 s; sync files=70, longest=0.852 s, average=0.023 s; distance=70631855 kB, estimate=70631855 kB; lsn=4D5/641A2970, redo lsn=4C6/37144588
+1727278487.098 [2024-09-25 17:34:47.098 CEST] [166800] LOG:  checkpoint starting: wal
+1727279127.437 [2024-09-25 17:45:27.437 CEST] [166800] LOG:  checkpoint complete: wrote 744 buffers (0.1%); 0 WAL file(s) added, 14 removed, 4297 recycled; write=634.546 s, sync=5.111 s, total=640.339 s; sync files=70, longest=2.139 s, average=0.073 s; distance=70630779 kB, estimate=70631747 kB; lsn=4E6/44168430, redo lsn=4D7/E0A32E0
+1727279196.283 [2024-09-25 17:46:36.283 CEST] [166800] LOG:  checkpoint starting: wal
+1727279820.201 [2024-09-25 17:57:00.201 CEST] [166800] LOG:  checkpoint complete: wrote 695 buffers (0.1%); 0 WAL file(s) added, 12 removed, 4299 recycled; write=620.106 s, sync=3.127 s, total=623.919 s; sync files=68, longest=1.209 s, average=0.046 s; distance=70632406 kB, estimate=70632406 kB; lsn=4F7/19585AD8, redo lsn=4E7/E5198B48
+1727279884.162 [2024-09-25 17:58:04.162 CEST] [166800] LOG:  checkpoint starting: wal
+1727280496.470 [2024-09-25 18:08:16.470 CEST] [166800] LOG:  checkpoint complete: wrote 567 buffers (0.1%); 0 WAL file(s) added, 11 removed, 4300 recycled; write=608.273 s, sync=3.265 s, total=612.309 s; sync files=67, longest=0.905 s, average=0.049 s; distance=70631095 kB, estimate=70632275 kB; lsn=507/EFB29418, redo lsn=4F8/BC146988
+1727280560.497 [2024-09-25 18:09:20.497 CEST] [166800] LOG:  checkpoint starting: wal
+1727281222.860 [2024-09-25 18:20:22.860 CEST] [166800] LOG:  checkpoint complete: wrote 532 buffers (0.1%); 0 WAL file(s) added, 13 removed, 4298 recycled; write=657.692 s, sync=4.014 s, total=662.363 s; sync files=67, longest=1.131 s, average=0.060 s; distance=70631466 kB, estimate=70632194 kB; lsn=518/C802AEF8, redo lsn=509/931512D0
+1727281290.043 [2024-09-25 18:21:30.043 CEST] [166800] LOG:  checkpoint starting: wal
+1727281917.641 [2024-09-25 18:31:57.641 CEST] [166800] LOG:  checkpoint complete: wrote 519 buffers (0.1%); 0 WAL file(s) added, 4 removed, 4307 recycled; write=625.796 s, sync=1.144 s, total=627.598 s; sync files=77, longest=0.669 s, average=0.015 s; distance=70630979 kB, estimate=70632072 kB; lsn=529/96C13120, redo lsn=51A/6A0E1FC0
+1727281983.930 [2024-09-25 18:33:03.930 CEST] [166800] LOG:  checkpoint starting: wal
+1727282581.772 [2024-09-25 18:43:01.772 CEST] [166800] LOG:  checkpoint complete: wrote 596 buffers (0.1%); 0 WAL file(s) added, 13 removed, 4298 recycled; write=593.572 s, sync=3.608 s, total=597.842 s; sync files=78, longest=1.013 s, average=0.047 s; distance=70631465 kB, estimate=70632011 kB; lsn=53A/76025BB0, redo lsn=52B/410EC420
+1727282646.892 [2024-09-25 18:44:06.892 CEST] [166800] LOG:  checkpoint starting: wal
+1727283250.973 [2024-09-25 18:54:10.973 CEST] [166800] LOG:  checkpoint complete: wrote 858 buffers (0.2%); 0 WAL file(s) added, 5 removed, 4306 recycled; write=602.002 s, sync=1.442 s, total=604.081 s; sync files=76, longest=0.408 s, average=0.019 s; distance=70631555 kB, estimate=70631966 kB; lsn=54B/45059748, redo lsn=53C/1810D3F8
+1727283318.749 [2024-09-25 18:55:18.749 CEST] [166800] LOG:  checkpoint starting: wal
+1727283955.857 [2024-09-25 19:05:55.857 CEST] [166800] LOG:  checkpoint complete: wrote 859 buffers (0.2%); 0 WAL file(s) added, 4 removed, 4307 recycled; write=635.083 s, sync=1.391 s, total=637.108 s; sync files=102, longest=0.539 s, average=0.014 s; distance=70631466 kB, estimate=70631916 kB; lsn=55C/1B513C50, redo lsn=54C/EF117DD0
+1727284019.528 [2024-09-25 19:06:59.528 CEST] [166800] LOG:  checkpoint starting: wal
+1727284704.808 [2024-09-25 19:18:24.808 CEST] [166800] LOG:  checkpoint complete: wrote 635 buffers (0.1%); 0 WAL file(s) added, 5 removed, 4306 recycled; write=682.958 s, sync=1.662 s, total=685.282 s; sync files=56, longest=0.850 s, average=0.030 s; distance=70631065 kB, estimate=70631831 kB; lsn=56C/F388FFA8, redo lsn=55D/C60BE478
+1727284779.878 [2024-09-25 19:19:39.878 CEST] [166800] LOG:  checkpoint starting: wal
+1727285423.847 [2024-09-25 19:30:23.847 CEST] [166800] LOG:  checkpoint complete: wrote 624 buffers (0.1%); 0 WAL file(s) added, 5 removed, 4306 recycled; write=641.609 s, sync=1.675 s, total=643.970 s; sync files=55, longest=0.747 s, average=0.031 s; distance=70631122 kB, estimate=70631760 kB; lsn=57D/CA30FF60, redo lsn=56E/9D072CF8
+1727285489.890 [2024-09-25 19:31:29.890 CEST] [166800] LOG:  checkpoint starting: wal
+1727285869.480 [2024-09-25 19:37:49.480 CEST] [312689] LOG:  automatic vacuum of table "test.public.hottail": index scans: 2
+	pages: 0 removed, 20883570 remain, 9433161 scanned (45.17% of total)
+	tuples: 4005203 removed, 1785645896 remain, 6483 are dead but not yet removable
+	removable cutoff: 53073844, which was 9203646 XIDs old when operation ended
+	frozen: 3800565 pages from table (18.20% of total) had 326648456 tuples frozen
+	index scan needed: 3801375 pages from table (18.20% of total) had 4006013 dead item identifiers removed
+	index "hottail_pkey": pages: 9023409 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 9358069 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 4644871 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 2933714 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 4409764 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 59.300 MB/s, avg write rate: 17.392 MB/s
+	buffer usage: 10062674 hits, 66025484 reads, 19364390 dirtied
+	WAL usage: 21720193 records, 12303221 full page images, 82573016947 bytes
+	system usage: CPU: user: 627.46 s, system: 531.47 s, elapsed: 8698.59 s
+1727285877.450 [2024-09-25 19:37:57.450 CEST] [312689] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 29.242 MB/s, avg write rate: 14.862 MB/s
+	buffer usage: 1144 hits, 29828 reads, 15160 dirtied
+	WAL usage: 16 records, 6 full page images, 41065 bytes
+	system usage: CPU: user: 0.32 s, system: 0.40 s, elapsed: 7.96 s
+1727286128.276 [2024-09-25 19:42:08.276 CEST] [166800] LOG:  checkpoint complete: wrote 540 buffers (0.1%); 0 WAL file(s) added, 8 removed, 4303 recycled; write=635.791 s, sync=2.066 s, total=638.386 s; sync files=243, longest=0.632 s, average=0.009 s; distance=70631734 kB, estimate=70631757 kB; lsn=58E/A40CEC00, redo lsn=57F/740C0818
+1727286194.133 [2024-09-25 19:43:14.133 CEST] [166800] LOG:  checkpoint starting: wal
+1727286848.418 [2024-09-25 19:54:08.418 CEST] [166800] LOG:  checkpoint complete: wrote 373 buffers (0.1%); 0 WAL file(s) added, 9 removed, 4302 recycled; write=650.414 s, sync=3.225 s, total=654.286 s; sync files=75, longest=0.676 s, average=0.043 s; distance=70631126 kB, estimate=70631694 kB; lsn=59F/7C99AF58, redo lsn=590/4B076288
+1727286916.205 [2024-09-25 19:55:16.205 CEST] [166800] LOG:  checkpoint starting: wal
+1727287555.174 [2024-09-25 20:05:55.174 CEST] [166800] LOG:  checkpoint complete: wrote 575 buffers (0.1%); 0 WAL file(s) added, 8 removed, 4303 recycled; write=636.151 s, sync=2.243 s, total=638.969 s; sync files=72, longest=0.568 s, average=0.032 s; distance=70632242 kB, estimate=70632242 kB; lsn=5B0/52093418, redo lsn=5A1/22142D18
+1727287623.918 [2024-09-25 20:07:03.918 CEST] [166800] LOG:  checkpoint starting: wal
+1727288284.692 [2024-09-25 20:18:04.692 CEST] [166800] LOG:  checkpoint complete: wrote 559 buffers (0.1%); 0 WAL file(s) added, 7 removed, 4304 recycled; write=657.583 s, sync=2.487 s, total=660.774 s; sync files=70, longest=1.508 s, average=0.036 s; distance=70630710 kB, estimate=70632089 kB; lsn=5C1/28B76220, redo lsn=5B1/F9090738
+1727288355.251 [2024-09-25 20:19:15.251 CEST] [166800] LOG:  checkpoint starting: wal
+1727288964.654 [2024-09-25 20:29:24.654 CEST] [166800] LOG:  checkpoint complete: wrote 546 buffers (0.1%); 0 WAL file(s) added, 6 removed, 4305 recycled; write=606.758 s, sync=1.973 s, total=609.404 s; sync files=68, longest=0.634 s, average=0.030 s; distance=70630912 kB, estimate=70631971 kB; lsn=5D1/FECEA580, redo lsn=5C2/D0010980
+1727289031.450 [2024-09-25 20:30:31.450 CEST] [166800] LOG:  checkpoint starting: wal
+1727289690.970 [2024-09-25 20:41:30.970 CEST] [166800] LOG:  checkpoint complete: wrote 453 buffers (0.1%); 0 WAL file(s) added, 14 removed, 4297 recycled; write=655.481 s, sync=3.360 s, total=659.520 s; sync files=62, longest=1.287 s, average=0.055 s; distance=70632292 kB, estimate=70632292 kB; lsn=5E2/DD0B9300, redo lsn=5D3/A70E9A88
+1727289750.994 [2024-09-25 20:42:30.994 CEST] [166800] LOG:  checkpoint starting: wal
+1727291300.065 [2024-09-25 21:08:20.065 CEST] [166800] LOG:  checkpoint complete: wrote 568 buffers (0.1%); 0 WAL file(s) added, 0 removed, 4311 recycled; write=1548.043 s, sync=0.635 s, total=1549.072 s; sync files=115, longest=0.505 s, average=0.006 s; distance=70631474 kB, estimate=70632210 kB; lsn=5F3/A62ACC30, redo lsn=5E4/7E0F6470
+1727291550.439 [2024-09-25 21:12:30.439 CEST] [166800] LOG:  checkpoint starting: time
+1727293170.689 [2024-09-25 21:39:30.689 CEST] [166800] LOG:  checkpoint complete: wrote 440440 buffers (84.0%); 0 WAL file(s) added, 0 removed, 4188 recycled; write=1619.637 s, sync=0.241 s, total=1620.250 s; sync files=104, longest=0.217 s, average=0.003 s; distance=68616138 kB, estimate=70430603 kB; lsn=5FA/85C5C458, redo lsn=5F4/DA0E8D58
+1727293350.785 [2024-09-25 21:42:30.785 CEST] [166800] LOG:  checkpoint starting: time
+1727293663.968 [2024-09-25 21:47:43.968 CEST] [166800] LOG:  checkpoint complete: wrote 2865 buffers (0.5%); 0 WAL file(s) added, 0 removed, 1560 recycled; write=312.646 s, sync=0.384 s, total=313.183 s; sync files=86, longest=0.383 s, average=0.005 s; distance=25564188 kB, estimate=65943961 kB; lsn=5FB/AF8C3E38, redo lsn=5FA/F25EFD80
+1727295150.454 [2024-09-25 22:12:30.454 CEST] [166800] LOG:  checkpoint starting: time
+1727295251.960 [2024-09-25 22:14:11.960 CEST] [166800] LOG:  checkpoint complete: wrote 1010 buffers (0.2%); 0 WAL file(s) added, 397 removed, 667 recycled; write=101.206 s, sync=0.001 s, total=101.507 s; sync files=51, longest=0.001 s, average=0.001 s; distance=17431758 kB, estimate=61092741 kB; lsn=5FF/1A523768, redo lsn=5FF/1A5236D8
+1727296950.617 [2024-09-25 22:42:30.617 CEST] [166800] LOG:  checkpoint starting: time
+1727297028.359 [2024-09-25 22:43:48.359 CEST] [166800] LOG:  checkpoint complete: wrote 503 buffers (0.1%); 0 WAL file(s) added, 470 removed, 1009 recycled; write=76.058 s, sync=1.198 s, total=77.743 s; sync files=56, longest=0.599 s, average=0.022 s; distance=24233306 kB, estimate=57406797 kB; lsn=605/42EF1398, redo lsn=604/E167A238
+1727298750.736 [2024-09-25 23:12:30.736 CEST] [166800] LOG:  checkpoint starting: time
+1727299099.664 [2024-09-25 23:18:19.664 CEST] [166800] LOG:  checkpoint complete: wrote 3216 buffers (0.6%); 0 WAL file(s) added, 389 removed, 1250 recycled; write=347.828 s, sync=0.526 s, total=348.928 s; sync files=91, longest=0.476 s, average=0.006 s; distance=26860528 kB, estimate=54352170 kB; lsn=60C/1B19F3A0, redo lsn=60B/48D763F8
+1727300550.422 [2024-09-25 23:42:30.422 CEST] [166800] LOG:  checkpoint starting: time
+1727300601.249 [2024-09-25 23:43:21.249 CEST] [166800] LOG:  checkpoint complete: wrote 502 buffers (0.1%); 0 WAL file(s) added, 494 removed, 462 recycled; write=50.307 s, sync=0.001 s, total=50.827 s; sync files=43, longest=0.001 s, average=0.001 s; distance=15661982 kB, estimate=50483152 kB; lsn=60F/4C5DDB0, redo lsn=60F/4C5DD20
+1727302199.953 [2024-09-26 00:09:59.953 CEST] [421810] LOG:  automatic vacuum of table "test.public.hottail": index scans: 3
+	pages: 0 removed, 42958187 remain, 22091360 scanned (51.43% of total)
+	tuples: 9386787 removed, 3672973452 remain, 9397 are dead but not yet removable
+	removable cutoff: 62461217, which was 4400853 XIDs old when operation ended
+	frozen: 8910804 pages from table (20.74% of total) had 765890982 tuples frozen
+	index scan needed: 8911339 pages from table (20.74% of total) had 9387372 dead item identifiers removed
+	index "hottail_pkey": pages: 12490678 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_id_idx": pages: 12490678 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_quantity_idx": pages: 6091428 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_client_id_idx": pages: 3793030 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	index "hottail_itime_idx": pages: 5616826 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+	avg read rate: 73.123 MB/s, avg write rate: 20.738 MB/s
+	buffer usage: 22774548 hits, 151124890 reads, 42860681 dirtied
+	WAL usage: 50826645 records, 28759646 full page images, 193045102451 bytes
+	system usage: CPU: user: 1322.97 s, system: 1121.15 s, elapsed: 16146.27 s
+1727302261.353 [2024-09-26 00:11:01.353 CEST] [471575] LOG:  automatic analyze of table "test.public.hottail"
+	avg read rate: 95.688 MB/s, avg write rate: 18.737 MB/s
+	buffer usage: 1873 hits, 29824 reads, 5840 dirtied
+	WAL usage: 14 records, 6 full page images, 36529 bytes
+	system usage: CPU: user: 0.32 s, system: 0.24 s, elapsed: 2.43 s
+1727302350.289 [2024-09-26 00:12:30.289 CEST] [166800] LOG:  checkpoint starting: time
+1727302631.319 [2024-09-26 00:17:11.319 CEST] [166800] LOG:  checkpoint complete: wrote 2799 buffers (0.5%); 0 WAL file(s) added, 313 removed, 1273 recycled; write=280.416 s, sync=0.001 s, total=281.031 s; sync files=149, longest=0.001 s, average=0.001 s; distance=25980470 kB, estimate=48032883 kB; lsn=615/367EB6E0, redo lsn=615/367EB650
+1727304563.303 [2024-09-26 00:49:23.303 CEST] [166799] LOG:  received fast shutdown request
+1727304563.304 [2024-09-26 00:49:23.304 CEST] [166799] LOG:  aborting any active transactions
+1727304563.305 [2024-09-26 00:49:23.305 CEST] [166799] LOG:  background worker "logical replication launcher" (PID 166805) exited with exit code 1
+1727304563.472 [2024-09-26 00:49:23.472 CEST] [166800] LOG:  shutting down
+1727304563.472 [2024-09-26 00:49:23.472 CEST] [166800] LOG:  checkpoint starting: shutdown immediate
+1727304563.482 [2024-09-26 00:49:23.482 CEST] [166800] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.007 s, sync=0.001 s, total=0.010 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=43229595 kB; lsn=615/367EB790, redo lsn=615/367EB790
+1727304564.151 [2024-09-26 00:49:24.151 CEST] [166799] LOG:  database system is shut down
